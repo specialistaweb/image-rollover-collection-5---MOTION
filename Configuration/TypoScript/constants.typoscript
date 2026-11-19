@@ -1,0 +1,38 @@
+# Rollovercollection 5 - MOTION: constants.
+# Used when the extension is included as static TypoScript template (sys_template record).
+# Sites using the site set get the same values from Configuration/Sets/Motion/settings.definitions.yaml.
+# Keep the defaults of the two files in sync.
+
+# customsubcategory=general=General
+# customsubcategory=colors=Colours
+# customsubcategory=size=Size
+plugin.tx_rollovercollection5 {
+  settings {
+    # cat=bootstrap package: rollovercollection5-motion/general/010; type=boolean; label=Title: keep HTML typed by editors: On: HTML in the image title is kept and cleaned by the TYPO3 HTML sanitizer. Off: plain text only.
+    titleRawdataOutput = 1
+    # cat=bootstrap package: rollovercollection5-motion/general/020; type=boolean; label=Description: keep HTML typed by editors: On: HTML in the image description is kept and cleaned by the TYPO3 HTML sanitizer. Off: plain text, line breaks kept.
+    captionRawdataOutput = 0
+    # cat=bootstrap package: rollovercollection5-motion/general/030; type=boolean; label=Show the "more" button: Shown only when the image has a link.
+    useButtonMore = 1
+    # cat=bootstrap package: rollovercollection5-motion/general/040; type=int+; label=Maximum image width (px): Images wider than this are scaled down before delivery. 0 = original file.
+    imageMaxWidth = 1400
+    # cat=bootstrap package: rollovercollection5-motion/general/050; type=string; label=Stylesheet: Path of the stylesheet with the layouts. Change it only to use your own copy.
+    cssFile = EXT:rollovercollection5/Resources/Public/Css/motion.css
+    # cat=bootstrap package: rollovercollection5-motion/colors/060; type=color; label=Accent colour: Buttons, badges, tint of the black and white layout, curtain panel.
+    accentColor = #3d5afe
+    # cat=bootstrap package: rollovercollection5-motion/colors/070; type=color; label=Text colour: Texts under the images (arch layout, full screen view).
+    textColor = #12141a
+    # cat=bootstrap package: rollovercollection5-motion/colors/080; type=color; label=Secondary text colour: Descriptions under the images.
+    mutedColor = #5d6472
+    # cat=bootstrap package: rollovercollection5-motion/colors/090; type=color; label=Card background: Background of the glowing border cards and of the full screen view.
+    surfaceColor = #ffffff
+    # cat=bootstrap package: rollovercollection5-motion/colors/100; type=color; label=Border colour: Border of the glowing border cards at rest.
+    lineColor = #e2e5eb
+    # cat=bootstrap package: rollovercollection5-motion/colors/110; type=string; label=Glowing border: colours: Comma separated colours of the rotating border, after the accent colour.
+    glowColors = #22d3ee, #a855f7, #f43f5e
+    # cat=bootstrap package: rollovercollection5-motion/size/120; type=int+; label=Corner radius (px)
+    radius = 18
+    # cat=bootstrap package: rollovercollection5-motion/size/130; type=int+; label=Space between the images (px)
+    gap = 24
+  }
+}

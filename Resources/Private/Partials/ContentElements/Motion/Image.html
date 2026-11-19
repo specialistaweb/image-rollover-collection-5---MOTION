@@ -1,0 +1,8 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>Image of a box: one file, scaled down to settings.R5imageMaxWidth (0 = original).</f:comment>
+<f:variable name="maxWidth">{settings.R5imageMaxWidth as integer}</f:variable>
+<f:if condition="{maxWidth} > 0">
+    <f:then><img src="{f:uri.image(image: file, maxWidth: maxWidth)}" alt="{file.alternative}" loading="lazy" decoding="async" /></f:then>
+    <f:else><img src="{f:uri.image(image: file)}" alt="{file.alternative}" loading="lazy" decoding="async" /></f:else>
+</f:if>
+</html>

@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>2851 Accordion: vertical strips, the one under the pointer widens.</f:comment>
+<figure class="rc5-item">
+    <div class="rc5-media"><f:render partial="Motion/Image" arguments="{file: file, settings: settings}" /></div>
+    <f:if condition="{file.title}"><span class="rc5-tab" aria-hidden="true">{file.title -> f:format.stripTags() -> f:format.htmlspecialchars(doubleEncode: 0)}</span></f:if>
+    <figcaption class="rc5-overlay">
+        <f:if condition="{file.title}"><h3 class="rc5-title"><f:render partial="Motion/Title" arguments="{file: file, settings: settings}" /></h3></f:if>
+        <f:render partial="Motion/Text" arguments="{file: file, settings: settings}" />
+        <f:render partial="Motion/More" arguments="{file: file, settings: settings}" />
+    </figcaption>
+</figure>
+</html>

@@ -1,0 +1,4 @@
+name: specialistaweb/rollovercollection5
+label: 'Rollovercollection 5 - MOTION'
+dependencies:
+  - bootstrap-package/content-elements

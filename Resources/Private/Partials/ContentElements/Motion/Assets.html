@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    Stylesheet and colour variables, registered once per page and only on pages with a MOTION layout.
+    Numbers are cast to integers; texts are escaped (the values come from site settings / constants).
+</f:comment>
+<f:variable name="radius">{settings.R5radius as integer}</f:variable>
+<f:variable name="gap">{settings.R5gap as integer}</f:variable>
+<f:asset.css identifier="rollovercollection5" href="{settings.R5cssFile}" />
+<f:asset.css identifier="rollovercollection5-variables">.rc5{--rc5-accent:{settings.R5accentColor -> f:format.stripTags() -> f:format.htmlspecialchars()};--rc5-ink:{settings.R5textColor -> f:format.stripTags() -> f:format.htmlspecialchars()};--rc5-muted:{settings.R5mutedColor -> f:format.stripTags() -> f:format.htmlspecialchars()};--rc5-surface:{settings.R5surfaceColor -> f:format.stripTags() -> f:format.htmlspecialchars()};--rc5-line:{settings.R5lineColor -> f:format.stripTags() -> f:format.htmlspecialchars()};--rc5-glow-colors:{settings.R5glowColors -> f:format.stripTags() -> f:format.htmlspecialchars()};--rc5-radius:{radius}px;--rc5-gap:{gap}px}</f:asset.css>
+</html>

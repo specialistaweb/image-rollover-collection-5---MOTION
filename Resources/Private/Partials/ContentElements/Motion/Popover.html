@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    2857 Popover: a click opens the image large with the full text (HTML Popover API, no JavaScript).
+    Closes with the button, Esc or a click outside.
+</f:comment>
+<f:variable name="popId">rc5-pop-{uid}-{file.uid}</f:variable>
+<figure class="rc5-item">
+    <button class="rc5-open" type="button" popovertarget="{popId}">
+        <span class="rc5-media"><f:render partial="Motion/Image" arguments="{file: file, settings: settings}" /></span>
+        <span class="rc5-caption">
+            <span class="rc5-title">{file.title -> f:format.stripTags() -> f:format.htmlspecialchars(doubleEncode: 0)}</span>
+            <span class="rc5-hint"><f:cObject typoscriptObjectPath="lib.rollovercollection5.label.open" /></span>
+        </span>
+    </button>
+    <div class="rc5-pop" id="{popId}" popover="auto">
+        <div class="rc5-pop-media"><f:render partial="Motion/Image" arguments="{file: file, settings: settings}" /></div>
+        <div class="rc5-pop-body">
+            <f:if condition="{file.title}"><h3 class="rc5-title"><f:render partial="Motion/Title" arguments="{file: file, settings: settings}" /></h3></f:if>
+            <f:render partial="Motion/Text" arguments="{file: file, settings: settings}" />
+            <f:render partial="Motion/More" arguments="{file: file, settings: settings}" />
+            <button class="rc5-close" type="button" popovertarget="{popId}" popovertargetaction="hide" title="{f:cObject(typoscriptObjectPath: 'lib.rollovercollection5.label.close')}"><span aria-hidden="true">&#215;</span><span class="visually-hidden"><f:cObject typoscriptObjectPath="lib.rollovercollection5.label.close" /></span></button>
+        </div>
+    </div>
+</figure>
+</html>

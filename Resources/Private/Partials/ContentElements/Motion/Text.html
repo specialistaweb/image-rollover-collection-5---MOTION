@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    Description of a box (file reference field "description"), only when filled.
+    R5captionRawdataOutput = 1: HTML kept, cleaned by the TYPO3 HTML sanitizer. 0: plain text with line breaks.
+</f:comment>
+<f:if condition="{file.description}">
+    <f:if condition="{settings.R5captionRawdataOutput} == 1">
+        <f:then><div class="rc5-text"><f:sanitize.html>{file.description}</f:sanitize.html></div></f:then>
+        <f:else><div class="rc5-text">{file.description -> f:format.htmlspecialchars(doubleEncode: 0) -> f:format.nl2br()}</div></f:else>
+    </f:if>
+</f:if>
+</html>

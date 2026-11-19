@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>2853 Tilt: the card tilts towards the pointer. CSS only: nine invisible zones drive tilt and light.</f:comment>
+<figure class="rc5-item">
+    <div class="rc5-card">
+        <div class="rc5-media"><f:render partial="Motion/Image" arguments="{file: file, settings: settings}" /></div>
+        <figcaption class="rc5-overlay">
+            <f:if condition="{file.title}"><h3 class="rc5-title"><f:render partial="Motion/Title" arguments="{file: file, settings: settings}" /></h3></f:if>
+            <f:render partial="Motion/Text" arguments="{file: file, settings: settings}" />
+            <f:render partial="Motion/More" arguments="{file: file, settings: settings}" />
+        </figcaption>
+        <span class="rc5-glare" aria-hidden="true"></span>
+        <span class="rc5-zones" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+    </div>
+</figure>
+</html>

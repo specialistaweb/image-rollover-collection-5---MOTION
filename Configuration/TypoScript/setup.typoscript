@@ -1,0 +1,121 @@
+# Rollovercollection 5 - MOTION
+# Requires bootstrap_package (content elements image, textpic, media, textmedia).
+
+# Labels
+lib.rollovercollection5.label {
+  readMore = TEXT
+  readMore {
+    value = Read more
+    lang.it = Scopri di più
+    lang.de = Mehr erfahren
+  }
+  open = TEXT
+  open {
+    value = Open
+    lang.it = Apri
+    lang.de = Öffnen
+  }
+  close = TEXT
+  close {
+    value = Close
+    lang.it = Chiudi
+    lang.de = Schließen
+  }
+}
+
+# Partials of this extension are added on top of the bootstrap_package ones,
+# but only for content elements using one of the MOTION layouts (tt_content.layout).
+# Every other layout keeps the plain bootstrap_package rendering.
+tt_content.image.partialRootPaths {
+  2850 = EXT:rollovercollection5/Resources/Private/Partials/ContentElements/
+  2850.stdWrap.if {
+    value = 2850,2851,2852,2853,2854,2855,2856,2857,2858
+    isInList.field = layout
+  }
+}
+tt_content.textpic.partialRootPaths {
+  2850 = EXT:rollovercollection5/Resources/Private/Partials/ContentElements/
+  2850.stdWrap.if {
+    value = 2850,2851,2852,2853,2854,2855,2856,2857,2858
+    isInList.field = layout
+  }
+}
+tt_content.media.partialRootPaths {
+  2850 = EXT:rollovercollection5/Resources/Private/Partials/ContentElements/
+  2850.stdWrap.if {
+    value = 2850,2851,2852,2853,2854,2855,2856,2857,2858
+    isInList.field = layout
+  }
+}
+tt_content.textmedia.partialRootPaths {
+  2850 = EXT:rollovercollection5/Resources/Private/Partials/ContentElements/
+  2850.stdWrap.if {
+    value = 2850,2851,2852,2853,2854,2855,2856,2857,2858
+    isInList.field = layout
+  }
+}
+
+# Settings handed over to the partials as {settings.R5...}
+tt_content.image.settings {
+  R5titleRawdataOutput = {$plugin.tx_rollovercollection5.settings.titleRawdataOutput}
+  R5captionRawdataOutput = {$plugin.tx_rollovercollection5.settings.captionRawdataOutput}
+  R5useButtonMore = {$plugin.tx_rollovercollection5.settings.useButtonMore}
+  R5imageMaxWidth = {$plugin.tx_rollovercollection5.settings.imageMaxWidth}
+  R5cssFile = {$plugin.tx_rollovercollection5.settings.cssFile}
+  R5accentColor = {$plugin.tx_rollovercollection5.settings.accentColor}
+  R5textColor = {$plugin.tx_rollovercollection5.settings.textColor}
+  R5mutedColor = {$plugin.tx_rollovercollection5.settings.mutedColor}
+  R5surfaceColor = {$plugin.tx_rollovercollection5.settings.surfaceColor}
+  R5lineColor = {$plugin.tx_rollovercollection5.settings.lineColor}
+  R5glowColors = {$plugin.tx_rollovercollection5.settings.glowColors}
+  R5radius = {$plugin.tx_rollovercollection5.settings.radius}
+  R5gap = {$plugin.tx_rollovercollection5.settings.gap}
+}
+tt_content.textpic.settings {
+  R5titleRawdataOutput = {$plugin.tx_rollovercollection5.settings.titleRawdataOutput}
+  R5captionRawdataOutput = {$plugin.tx_rollovercollection5.settings.captionRawdataOutput}
+  R5useButtonMore = {$plugin.tx_rollovercollection5.settings.useButtonMore}
+  R5imageMaxWidth = {$plugin.tx_rollovercollection5.settings.imageMaxWidth}
+  R5cssFile = {$plugin.tx_rollovercollection5.settings.cssFile}
+  R5accentColor = {$plugin.tx_rollovercollection5.settings.accentColor}
+  R5textColor = {$plugin.tx_rollovercollection5.settings.textColor}
+  R5mutedColor = {$plugin.tx_rollovercollection5.settings.mutedColor}
+  R5surfaceColor = {$plugin.tx_rollovercollection5.settings.surfaceColor}
+  R5lineColor = {$plugin.tx_rollovercollection5.settings.lineColor}
+  R5glowColors = {$plugin.tx_rollovercollection5.settings.glowColors}
+  R5radius = {$plugin.tx_rollovercollection5.settings.radius}
+  R5gap = {$plugin.tx_rollovercollection5.settings.gap}
+}
+tt_content.media.settings {
+  R5titleRawdataOutput = {$plugin.tx_rollovercollection5.settings.titleRawdataOutput}
+  R5captionRawdataOutput = {$plugin.tx_rollovercollection5.settings.captionRawdataOutput}
+  R5useButtonMore = {$plugin.tx_rollovercollection5.settings.useButtonMore}
+  R5imageMaxWidth = {$plugin.tx_rollovercollection5.settings.imageMaxWidth}
+  R5cssFile = {$plugin.tx_rollovercollection5.settings.cssFile}
+  R5accentColor = {$plugin.tx_rollovercollection5.settings.accentColor}
+  R5textColor = {$plugin.tx_rollovercollection5.settings.textColor}
+  R5mutedColor = {$plugin.tx_rollovercollection5.settings.mutedColor}
+  R5surfaceColor = {$plugin.tx_rollovercollection5.settings.surfaceColor}
+  R5lineColor = {$plugin.tx_rollovercollection5.settings.lineColor}
+  R5glowColors = {$plugin.tx_rollovercollection5.settings.glowColors}
+  R5radius = {$plugin.tx_rollovercollection5.settings.radius}
+  R5gap = {$plugin.tx_rollovercollection5.settings.gap}
+}
+tt_content.textmedia.settings {
+  R5titleRawdataOutput = {$plugin.tx_rollovercollection5.settings.titleRawdataOutput}
+  R5captionRawdataOutput = {$plugin.tx_rollovercollection5.settings.captionRawdataOutput}
+  R5useButtonMore = {$plugin.tx_rollovercollection5.settings.useButtonMore}
+  R5imageMaxWidth = {$plugin.tx_rollovercollection5.settings.imageMaxWidth}
+  R5cssFile = {$plugin.tx_rollovercollection5.settings.cssFile}
+  R5accentColor = {$plugin.tx_rollovercollection5.settings.accentColor}
+  R5textColor = {$plugin.tx_rollovercollection5.settings.textColor}
+  R5mutedColor = {$plugin.tx_rollovercollection5.settings.mutedColor}
+  R5surfaceColor = {$plugin.tx_rollovercollection5.settings.surfaceColor}
+  R5lineColor = {$plugin.tx_rollovercollection5.settings.lineColor}
+  R5glowColors = {$plugin.tx_rollovercollection5.settings.glowColors}
+  R5radius = {$plugin.tx_rollovercollection5.settings.radius}
+  R5gap = {$plugin.tx_rollovercollection5.settings.gap}
+}
+
+# The stylesheet is not added to every page: the gallery partial registers it (with the
+# colour variables) only on pages that contain a MOTION layout.

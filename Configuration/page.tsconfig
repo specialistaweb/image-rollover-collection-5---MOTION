@@ -1,0 +1,50 @@
+# Rollovercollection 5 - MOTION: entries of the "Layout" select (tt_content.layout).
+# Loaded automatically for every page (TYPO3 12+), no registration needed.
+
+TCEFORM.tt_content.layout.types.textpic.addItems {
+  2850 = MOTION - Arch
+  2851 = MOTION - Accordion panels
+  2852 = MOTION - Frosted glass
+  2853 = MOTION - 3D tilt
+  2854 = MOTION - Glowing border
+  2855 = MOTION - Bento grid
+  2856 = MOTION - Black and white to colour
+  2857 = MOTION - Open full screen
+  2858 = MOTION - Curtain
+}
+
+TCEFORM.tt_content.layout.types.textmedia.addItems {
+  2850 = MOTION - Arch
+  2851 = MOTION - Accordion panels
+  2852 = MOTION - Frosted glass
+  2853 = MOTION - 3D tilt
+  2854 = MOTION - Glowing border
+  2855 = MOTION - Bento grid
+  2856 = MOTION - Black and white to colour
+  2857 = MOTION - Open full screen
+  2858 = MOTION - Curtain
+}
+
+TCEFORM.tt_content.layout.types.image.addItems {
+  2850 = MOTION - Arch
+  2851 = MOTION - Accordion panels
+  2852 = MOTION - Frosted glass
+  2853 = MOTION - 3D tilt
+  2854 = MOTION - Glowing border
+  2855 = MOTION - Bento grid
+  2856 = MOTION - Black and white to colour
+  2857 = MOTION - Open full screen
+  2858 = MOTION - Curtain
+}
+
+TCEFORM.tt_content.layout.types.media.addItems {
+  2850 = MOTION - Arch
+  2851 = MOTION - Accordion panels
+  2852 = MOTION - Frosted glass
+  2853 = MOTION - 3D tilt
+  2854 = MOTION - Glowing border
+  2855 = MOTION - Bento grid
+  2856 = MOTION - Black and white to colour
+  2857 = MOTION - Open full screen
+  2858 = MOTION - Curtain
+}

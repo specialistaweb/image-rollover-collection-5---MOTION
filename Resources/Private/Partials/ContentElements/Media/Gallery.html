@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    Rollovercollection 5 - MOTION: gallery wrapper.
+    Used instead of the bootstrap_package partial only when tt_content.layout is one of the
+    MOTION layouts (see Configuration/TypoScript/setup.typoscript). Only image files are shown.
+
+    2850 Arch | 2851 Accordion | 2852 Glass | 2853 Tilt | 2854 Glow
+    2855 Bento | 2856 Mono | 2857 Popover | 2858 Curtain
+</f:comment>
+<f:if condition="{files}">
+    <f:render partial="Motion/Assets" arguments="{settings: settings}" />
+    <f:switch expression="{data.layout}">
+        <f:case value="2850"><f:variable name="kind" value="Arch" /></f:case>
+        <f:case value="2851"><f:variable name="kind" value="Accordion" /></f:case>
+        <f:case value="2852"><f:variable name="kind" value="Glass" /></f:case>
+        <f:case value="2853"><f:variable name="kind" value="Tilt" /></f:case>
+        <f:case value="2854"><f:variable name="kind" value="Glow" /></f:case>
+        <f:case value="2855"><f:variable name="kind" value="Bento" /></f:case>
+        <f:case value="2856"><f:variable name="kind" value="Mono" /></f:case>
+        <f:case value="2857"><f:variable name="kind" value="Popover" /></f:case>
+        <f:case value="2858"><f:variable name="kind" value="Curtain" /></f:case>
+        <f:defaultCase><f:variable name="kind" value="Arch" /></f:defaultCase>
+    </f:switch>
+    <f:variable name="cols">{data.imagecols as integer}</f:variable>
+    <f:if condition="{cols} < 1 || {cols} > 6"><f:variable name="cols" value="3" /></f:if>
+    <div class="rc5 rc5-{kind -> f:format.case(mode: 'lower')} rc5-cols-{cols}">
+        <f:for each="{files}" as="file">
+            <f:if condition="{file.type} == 2">
+                <f:render partial="Motion/{kind}" arguments="{file: file, settings: settings, uid: data.uid}" />
+            </f:if>
+        </f:for>
+    </div>
+</f:if>
+</html>

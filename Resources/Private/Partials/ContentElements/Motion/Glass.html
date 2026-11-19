@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>2852 Glass: frosted glass panel with the title, opens to show text and button.</f:comment>
+<figure class="rc5-item">
+    <div class="rc5-media"><f:render partial="Motion/Image" arguments="{file: file, settings: settings}" /></div>
+    <figcaption class="rc5-caption">
+        <f:if condition="{file.title}"><h3 class="rc5-title"><f:render partial="Motion/Title" arguments="{file: file, settings: settings}" /></h3></f:if>
+        <div class="rc5-extra"><div>
+            <f:render partial="Motion/Text" arguments="{file: file, settings: settings}" />
+            <f:render partial="Motion/More" arguments="{file: file, settings: settings}" />
+        </div></div>
+    </figcaption>
+</figure>
+</html>

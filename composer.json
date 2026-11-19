@@ -1,0 +1,41 @@
+{
+    "name": "specialistaweb/rollovercollection5",
+    "type": "typo3-cms-extension",
+    "description": "MOTION: nine modern hover layouts, CSS only (arch, accordion, frosted glass, 3D tilt, glowing border, bento grid, black and white to colour, full screen view, curtain) for the content elements textmedia, media, textpic and image. Requires bootstrap_package (Bootstrap 5).",
+    "keywords": [
+        "TYPO3",
+        "image",
+        "rollover",
+        "hover",
+        "effect",
+        "animation",
+        "gallery",
+        "bootstrap5",
+        "bootstrap",
+        "motion"
+    ],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Alessandro Tuveri",
+            "role": "Developer"
+        },
+        {
+            "name": "Giulia Tuveri",
+            "email": "gt@specialistaweb.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "bk2k/bootstrap-package": "^14.0 || ^15.0 || ^16.0",
+        "typo3/cms-core": "^12.4 || ^13.4 || ^14.3",
+        "typo3/cms-fluid": "^12.4 || ^13.4 || ^14.3",
+        "typo3/cms-frontend": "^12.4 || ^13.4 || ^14.3"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "rollovercollection5"
+        }
+    }
+}

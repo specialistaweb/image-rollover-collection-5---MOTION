@@ -1,0 +1,106 @@
+# Rollovercollection 5 - MOTION: site settings (Site Management > Settings).
+# Every setting is also available as TypoScript constant with the same key (TYPO3 12).
+# Keep the defaults in sync with Configuration/TypoScript/constants.typoscript.
+categories:
+  Rollovercollection5:
+    label: 'Rollovercollection 5 - MOTION'
+  Rollovercollection5.general:
+    label: 'General'
+    parent: Rollovercollection5
+  Rollovercollection5.colors:
+    label: 'Colours'
+    parent: Rollovercollection5
+  Rollovercollection5.size:
+    label: 'Size'
+    parent: Rollovercollection5
+
+settings:
+
+  plugin.tx_rollovercollection5.settings.titleRawdataOutput:
+    label: 'Title: keep HTML typed by editors'
+    description: 'On: HTML in the image title is kept and cleaned by the TYPO3 HTML sanitizer. Off: plain text only.'
+    category: Rollovercollection5.general
+    type: bool
+    default: true
+
+  plugin.tx_rollovercollection5.settings.captionRawdataOutput:
+    label: 'Description: keep HTML typed by editors'
+    description: 'On: HTML in the image description is kept and cleaned by the TYPO3 HTML sanitizer. Off: plain text, line breaks kept.'
+    category: Rollovercollection5.general
+    type: bool
+    default: false
+
+  plugin.tx_rollovercollection5.settings.useButtonMore:
+    label: 'Show the "more" button'
+    description: 'Shown only when the image has a link.'
+    category: Rollovercollection5.general
+    type: bool
+    default: true
+
+  plugin.tx_rollovercollection5.settings.imageMaxWidth:
+    label: 'Maximum image width (px)'
+    description: 'Images wider than this are scaled down before delivery. 0 = original file.'
+    category: Rollovercollection5.general
+    type: int
+    default: 1400
+
+  plugin.tx_rollovercollection5.settings.cssFile:
+    label: 'Stylesheet'
+    description: 'Path of the stylesheet with the layouts. Change it only to use your own copy.'
+    category: Rollovercollection5.general
+    type: string
+    default: 'EXT:rollovercollection5/Resources/Public/Css/motion.css'
+
+  plugin.tx_rollovercollection5.settings.accentColor:
+    label: 'Accent colour'
+    description: 'Buttons, badges, tint of the black and white layout, curtain panel.'
+    category: Rollovercollection5.colors
+    type: color
+    default: '#3d5afe'
+
+  plugin.tx_rollovercollection5.settings.textColor:
+    label: 'Text colour'
+    description: 'Texts under the images (arch layout, full screen view).'
+    category: Rollovercollection5.colors
+    type: color
+    default: '#12141a'
+
+  plugin.tx_rollovercollection5.settings.mutedColor:
+    label: 'Secondary text colour'
+    description: 'Descriptions under the images.'
+    category: Rollovercollection5.colors
+    type: color
+    default: '#5d6472'
+
+  plugin.tx_rollovercollection5.settings.surfaceColor:
+    label: 'Card background'
+    description: 'Background of the glowing border cards and of the full screen view.'
+    category: Rollovercollection5.colors
+    type: color
+    default: '#ffffff'
+
+  plugin.tx_rollovercollection5.settings.lineColor:
+    label: 'Border colour'
+    description: 'Border of the glowing border cards at rest.'
+    category: Rollovercollection5.colors
+    type: color
+    default: '#e2e5eb'
+
+  plugin.tx_rollovercollection5.settings.glowColors:
+    label: 'Glowing border: colours'
+    description: 'Comma separated colours of the rotating border, after the accent colour.'
+    category: Rollovercollection5.colors
+    type: string
+    default: '#22d3ee, #a855f7, #f43f5e'
+
+  plugin.tx_rollovercollection5.settings.radius:
+    label: 'Corner radius (px)'
+    category: Rollovercollection5.size
+    type: int
+    default: 18
+
+  plugin.tx_rollovercollection5.settings.gap:
+    label: 'Space between the images (px)'
+    category: Rollovercollection5.size
+    type: int
+    default: 24
